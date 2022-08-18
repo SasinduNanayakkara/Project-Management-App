@@ -1,9 +1,21 @@
 import React from 'react'
+import logo from '../asserts/logo.png';
 
-function Header() {
+const Header = () => {
   return (
-    <div>Header</div>
+    <nav className='navbar bg-light mb-4 p-0'>
+        <div className='container'>
+            <a href="/" className='navbar-brand'>
+                <div className='d-flex'>
+                    <img src={logo} alt="" className='mr-2' height="50"/>
+                    <div>
+                        Project Management
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>
   )
 }
 
-export default Header
+export default Header;

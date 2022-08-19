@@ -1,4 +1,5 @@
 import React from 'react'
+import Spinner from './Spinner';
 import {useQuery} from "@apollo/client";
 import ClientRow from "./ClientRow";
 import {GET_CLIENTS} from "../queries/clientQuery";
@@ -6,13 +7,13 @@ import {GET_CLIENTS} from "../queries/clientQuery";
 const Clients = () => {
     const {loading, error, data} = useQuery(GET_CLIENTS);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <Spinner/>;
     if (error) return <p>Something went wrong</p>;
 
   return (
     <>
         {!loading && !error && (
-            <table className='table table-hover mt-3'>
+            <table style={{marginRight:"16px", marginLeft:"16px"}} className='table table-hover mt-3'>
                 <thead>
                     <tr>
                         <th>Name</th>

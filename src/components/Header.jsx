@@ -9,7 +9,7 @@ const Header = () => {
                 <div className='d-flex'>
                     <img src={logo} alt="" className='mr-2' height="50"/>
                     <div>
-                        Project Management
+                        <h1>GraphQL Project Management</h1>
                     </div>
                 </div>
             </a>
